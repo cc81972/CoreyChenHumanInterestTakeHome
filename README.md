@@ -85,65 +85,6 @@ This is a known issue with `react-scripts 5.0.1` and webpack-dev-server.
 └── README.md              # This file
 ```
 
-## API Endpoints
-
-### GET `/api/contribution`
-Returns the current contribution settings and user data.
-
-**Response:**
-```json
-{
-  "type": "percentage",
-  "rate": 5,
-  "userData": {
-    "age": 30,
-    "salary": 75000,
-    "paychecksPerYear": 26,
-    "currentYTD": 4500
-  }
-}
-```
-
-### POST `/api/contribution`
-Updates the contribution settings.
-
-**Request Body:**
-```json
-{
-  "type": "percentage",
-  "rate": 5
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "contribution": {
-    "type": "percentage",
-    "rate": 5
-  }
-}
-```
-
-### GET `/api/projection`
-Calculates retirement savings projection based on contribution settings.
-
-**Query Parameters:**
-- `type`: "percentage" or "dollar"
-- `rate`: Contribution rate (number)
-- `age`: Current age (optional, defaults to 30)
-
-**Response:**
-```json
-{
-  "projectedSavings": 1234567,
-  "yearsToRetirement": 35,
-  "annualContribution": 15000,
-  "perPaycheckContribution": 576
-}
-```
-
 ## Mock Data
 
 The application uses mock data for demonstration:
